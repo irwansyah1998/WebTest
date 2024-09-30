@@ -11,3 +11,5 @@ This Application  is make for Learning about laravel
 ## Features
 - **[Laravel v.10](https://laravel.com/docs/10.x/)**
 - **[TailwindCSS](https://tailwindcss.com/)**
+
+## BETA VERSION
