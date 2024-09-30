@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./aboutme.svg" width="100%"/>
+<img src="https://drive.usercontent.google.com/download?id=1kB0GzVRtEqRSvcqQ5nfza5Az-DZNM1SY&export=download&authuser=0" width="100%"/>
 
 </div>
 
