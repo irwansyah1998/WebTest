@@ -14,3 +14,4 @@ This Application  is make for Learning about laravel
 
 ## BETA VERSION
 > Simple view data with TailwindCSS
+> Create Data With POST Method
