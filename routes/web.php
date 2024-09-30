@@ -14,9 +14,8 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route untuk menampilkan daftar post
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
 
 Route::resource('posts', PostController::class);
 
