@@ -13,3 +13,4 @@ This Application  is make for Learning about laravel
 - **[TailwindCSS](https://tailwindcss.com/)**
 
 ## BETA VERSION
+> Simple view data with TailwindCSS
