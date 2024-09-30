@@ -12,7 +12,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        // Ambil semua data dari model Post
+        $posts = Post::all();
+
+        // Kirim data $posts ke view index.blade.php
+        return view('index', compact('posts'));
     }
 
     /**
@@ -20,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
