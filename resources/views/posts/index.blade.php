@@ -12,6 +12,7 @@
             <tr>
                 <th scope="col" class="px-6 py-3">Title</th>
                 <th scope="col" class="px-6 py-3">Actions</th>
+                <th scope="col" class="px-6 py-3"><a href="{{ route('posts.create') }}" class="bg-yellow-500 text-white px-4 py-2 rounded">Tambah Data</a></th>
             </tr>
         </thead>
         <tbody>

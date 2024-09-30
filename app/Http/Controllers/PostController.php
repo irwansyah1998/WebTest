@@ -7,63 +7,61 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Menampilkan daftar post
     public function index()
     {
-        // Ambil semua data dari model Post
-        $posts = Post::all();
-
-        // Kirim data $posts ke view index.blade.php
-        return view('index', compact('posts'));
+        $posts = Post::all(); // Mengambil semua post dari database
+        return view('posts.index', compact('posts')); // Mengirim data post ke view
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Menampilkan form untuk membuat post baru
     public function create()
     {
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // Menyimpan post baru ke database
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
+        Post::create($validatedData); // Menyimpan data ke database
+
+        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    // Menampilkan detail post tertentu
     public function show(Post $post)
     {
-        //
+        return view('posts.show', compact('post'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    // Menampilkan form untuk mengedit post tertentu
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    // Memperbarui post tertentu di database
     public function update(Request $request, Post $post)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
+        $post->update($validatedData);
+
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    // Menghapus post tertentu dari database
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully.');
     }
 }
