@@ -10,5 +10,6 @@
     <div class="container mx-auto">
         @yield('content') <!-- Tempat untuk konten dari view yang mengextend layout ini -->
     </div>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>
