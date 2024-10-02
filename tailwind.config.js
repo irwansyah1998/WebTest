@@ -4,6 +4,7 @@ module.exports = {
     './resources/**/*.blade.php',
     './resources/**/*.js',
     './resources/**/*.vue',
+    require('flowbite/plugin'),
   ],
   theme: {
     extend: {},
