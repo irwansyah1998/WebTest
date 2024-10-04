@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Login</h1>
+    <h1 class="text-2xl font-bold mb-4">Register</h1>
 
     <form action="{{ route('posts.store') }}" method="POST" class="max-w-sm mx-auto">
         @csrf
